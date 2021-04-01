@@ -1,0 +1,633 @@
+@import 'base/reset';
+@import'base/variables';
+@import'base/fonts';
+@import 'base/mixins';
+
+header {
+    width: 100%;
+    height: 700px;
+    background-color: black;
+
+    .logo {
+        @include justify-centr;
+        width: 50%;
+        height: 117px;
+        @include font-Montserrat(bold, 20px, 24px);
+        padding-right: 75px;
+
+        a {
+
+            text-decoration: none;
+            color: white;
+
+        }
+
+        &__link {
+            @include justify-centr;
+        }
+    }
+
+    .menu {
+        @include justify-centr;
+        width: 50%;
+        height: 117px;
+        padding-right: 15px;
+
+        a {
+            @include font-Roboto(normal, 14px, 17px);
+
+            text-decoration: none;
+            color: white;
+        }
+
+        &__link {
+            @include justify-centr;
+            padding-right: 19px;
+
+            &_border {
+                border: white 1px solid;
+                border-radius: 40px;
+                padding: 10px 17px 9px 18px;
+            }
+        }
+
+    }
+}
+
+.info {
+    padding-top: 107px;
+    // padding-bottom: 7px;
+
+    &__text {
+        color: white;
+        @include font-Montserrat(bold, 52px, 63px);
+        text-align: center;
+
+        &_small {
+            padding: 27px;
+            @include font-Roboto(300, 24px, 24px);
+        }
+    }
+
+}
+
+.button {
+
+
+    @include font-Montserrat(bold, 14px, 17px);
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+
+
+    &__link {
+        @include justify-centr;
+        align-items: unset;
+        padding-right: 20px;
+
+        &_border {
+            border-radius: 40px;
+            padding: 12px 18.5px 11px 19.5px;
+            background: $first-color;
+        }
+    }
+}
+
+.text-header {
+    padding: 89px 0px 35px 0px;
+    text-align: center;
+    @include font-Montserrat(700, 27px, 32px);
+
+    &_discover {
+        padding: 83px 0px 33px 0px;
+    }
+
+    &_crate {
+        padding: 28px 0px 55px 0px;
+    }
+}
+
+.container {
+    width: 100%;
+    @include justify-centr;
+    flex-wrap: wrap;
+
+
+}
+
+// .text-header{
+//     text-align: center;
+//     @include font-Montserrat(700, 27px, 32px);
+// padding: 89px 0 35px 0;
+
+
+.box__step {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px 10px 0px 10px;
+    width: 300px;
+    height: 400px;
+    padding: 0px 25px 21px 25px;
+    background: #C02425;
+    background: -webkit-linear-gradient(to bottom, #F0CB35, #C02425);
+    background: linear-gradient(to bottom, #F0CB35, #C02425);
+    color: white;
+
+    &__link {
+        padding: 18px 25px 10px 25px;
+
+        &_border {
+            @include font-Montserrat(normal, 10px, 12px);
+            color: white;
+            width: max-content;
+            border: white 1px solid;
+            border-radius: 40px;
+            padding: 5px 14px 3px 14px;
+            background: $first-color;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__header-step {
+        @include font-Montserrat(700, 24px, 26px);
+        padding-top: 15px;
+
+    }
+
+    &__text-step {
+        @include font-Roboto(300, 14px, 14px);
+        padding-top: 22px;
+    }
+}
+
+.contact {
+    text-align: center;
+
+    width: 221px;
+    height: 205px;
+    margin: 0px 10px 50px 10px;
+
+    &__box {
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        background-color: gray;
+        border-radius: 50%;
+        position: relative;
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: absolute;
+            top: 81px;
+            right: -6px;
+
+            &_bgcolor-pink {
+                background-color: $first-color;
+            }
+
+            &_bgcolor-blue {
+                background-color: rgb(56, 162, 233);
+            }
+
+            &_bgcolor-orange {
+                background-color: rgb(247, 96, 41);
+            }
+
+            &_bgcolor-blue-dark {
+                background-color: rgb(17, 21, 238);
+            }
+
+            &_img-music {
+                background-image: url(../image/music.svg);
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+
+            &_img-pen {
+                background-image: url(../image/pen.svg);
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+
+            &_img-camera {
+                background-image: url(../image/camera.svg);
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+
+            &_img-plane {
+                background-image: url(../image/plane-departure.svg);
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+        }
+    }
+}
+
+.contact-name {
+    display: block;
+    margin-top: 20px;
+    @include font-Montserrat(bold, 14px, 17px);
+
+}
+
+.contact-about {
+    display: block;
+    margin-top: 20px;
+    @include font-Roboto(300, 14px, 14px);
+}
+
+.button {
+    padding: 5px;
+    color: $first-color;
+
+    &__border-radius {
+        padding: 12px 27px 9px 18px;
+        border: 2px solid $first-color;
+        border-radius: 40px;
+        @include font-Montserrat(bold, 14px, 17px);
+    }
+}
+
+
+
+.container-grid {
+
+    width: 940px;
+    color: white;
+    height: 1031px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 310px 310px 310px;
+    gap: 20px 20px;
+    @include font-Montserrat(700, 22px, 27px);
+    text-align: center;
+
+    &__box-sport {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: black;
+        @include justify-centr;
+    }
+
+    &__box-wellnes {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: black;
+        @include justify-centr;
+    }
+
+    &__box-extreme {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        background-color: grey;
+        @include justify-centr;
+
+
+    }
+
+    &__box-games {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: grey;
+        @include justify-centr;
+
+    }
+
+    &__box-culture {
+        grid-column: 2/4;
+        grid-row: 2/3;
+        background-color: grey;
+        @include justify-centr;
+    }
+
+    &__box-enjomet {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        background-color: grey;
+        @include justify-centr;
+    }
+
+    &__box-trevelling {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        background-color: grey;
+        @include justify-centr;
+    }
+}
+
+.text-question {
+    color: gray;
+    @include font-Roboto(300, 18px, 14px);
+
+}
+
+.search {
+    padding: 25px 0 48px 2px;
+
+    .search-field {
+        width: 299px;
+        height: 40px;
+        color: grey;
+        @include font-Roboto(300, 14px, 16px);
+    }
+
+    .search-button {
+        width: 172.12px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: $first-color;
+        color: white;
+        @include font-Montserrat(700, 14px, 17px);
+    }
+}
+
+hr {
+    margin-top: 50px;
+    background-color: $first-color;
+    padding-top: 3px;
+}
+
+footer {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+
+    .logo {
+        padding: 38px 0px 0 0;
+        grid-column: 1/2;
+        text-align: right;
+
+
+        &__link {
+            @include font-Montserrat(400, 16px, 20px);
+
+
+            a {
+                text-align: left;
+                text-decoration: none;
+                color: $first-color;
+            }
+        }
+    }
+
+    .company {
+
+        grid-column: 2/3;
+        @include font-Montserrat(700, 14px, 17px);
+        padding: 38px 0 20px 129px;
+
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            a {
+                color: grey;
+                padding: 1px 0;
+                text-decoration: none;
+                @include font-Roboto(300, 14px, 26px);
+            }
+        }
+    }
+
+    .partners {
+        grid-column: 3/4;
+        @include font-Montserrat(700, 14px, 17px);
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .design {
+        padding-right: 20px;
+        text-align: left;
+        grid-column: 4/5;
+        @include font-Roboto(700, 10px, 12px);
+        color: grey;
+        padding-top: 40px;
+    }
+}
+
+
+
+@media screen and (max-width:767px) {
+
+    header {
+        height: 540px;
+    }
+    // .container {
+    //     display: block;
+    //     margin: 0 auto;
+    //     text-align: center;
+    // }
+    .container {
+        display: block;
+        margin: 0 auto;
+
+
+        .logo {
+            position: absolute;
+            top: 70px;
+            left: 114px;
+            text-align: center;
+        }
+
+        .menu {
+            position: relative;
+            margin: 0px auto;
+        }
+    }
+
+    .info__text {
+        @include font-Montserrat(bold, 30px, 37px);
+
+        &_small {
+            @include font-Roboto(300, 18px, 24px);
+        }
+    }
+
+    .info {
+        padding-top: 50px;
+    }
+
+    .button__link_border {
+        padding: 12px auto 11px auto;
+
+        a {
+            display: block;
+            text-align: center;
+        }
+    }
+
+
+    .box__step{
+        margin: 0 auto;
+    &__header-step {
+        line-height: 16px;
+    }
+    }
+    .text-header {
+        padding: 36px 20px 14px 20px;
+    }
+
+    .container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact {
+        margin: 14px auto 2px auto;
+    }
+
+    .container-grid {
+        display: block;
+        width: 90%;
+        height: 903px;
+        margin: 5px auto;
+
+        &__box-trevelling {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-sport {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-wellnes {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-extreme {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-games {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-culture {
+            height: 120px;
+            margin: 5px 0;
+        }
+
+        &__box-enjomet {
+            height: 120px;
+            margin: 5px 0;
+        }
+    }
+
+
+
+    .button {
+        margin: 30px auto;
+    }
+
+    .text-question {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .search .search-button {
+        margin-top: 15px;
+    }
+
+    .search .search-button {
+        width: 301.12px;
+    }
+
+    footer {
+        display: block;
+
+        .logo__link {
+            text-align: center;
+        }
+
+        .company {
+            padding: 20px 60px 0px 60px;
+
+            .text-company {
+                display: block;
+                text-align: center;
+
+            }
+
+            &__menu {
+                display: block;
+                text-align: center;
+            }
+
+        }
+
+        .partners {
+            display: block;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .design {
+            display: block;
+            text-align: center;
+            padding: 10px 0 20px 0;
+
+        }
+    }
+
+    .search {
+        &__button {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .text-header {
+        @include font-Montserrat(bold, 22px, 27px);
+    }
+
+    .box__step {
+        width: 300px;
+        height: 240px;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media screen and (max-width:1439px) {
+    .box__step {
+        width: 236px;
+        text-align: left;
+
+        &__header-step {
+            line-height: 16px;
+        }
+    }
+
+    .contact {
+        width: 237px;
+    }
+}

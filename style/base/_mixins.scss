@@ -1,0 +1,22 @@
+@mixin justify-centr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin justify-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin font-Montserrat ( $fw, $fz, $fh) {
+    font-family:Montserrat;
+font-weight: $fw;
+font-size: $fz;
+line-height: $fh;
+}
+@mixin font-Roboto ( $fw, $fz, $fh) {
+    font-family:Roboto;
+font-weight: $fw;
+font-size: $fz;
+line-height: $fh;
+}
