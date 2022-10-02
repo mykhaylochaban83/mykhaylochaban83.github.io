@@ -221,7 +221,7 @@ header .menu__link_border {
   border: white 1px solid;
   border-radius: 40px;
   padding: 5px 14px 3px 14px;
-  background: #FF4E50;
+  background:red;
   letter-spacing: 2px;
   margin-bottom: 5px;
 }
